@@ -16,7 +16,6 @@ module Rack
         when %r{/jspm_packages/[^/]+/}
           headers = headers.merge(cache_control)
       end
-      p env['PATH_INFO'], headers
       [status, headers, body]
     end
 
